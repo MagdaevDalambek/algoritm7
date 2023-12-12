@@ -32,7 +32,7 @@ def procedurehuffman(f):
         fs = f1 + f2
         ord_val = ord('a')
         fl = str(fs)
-        while fl in visited_fs:  # Проверка на уникальность значения fs
+        while fl in visited_fs:
             letter = chr(ord_val)
             # Добавить букву к значению fs через пробел
             fl = str(fs) + " " + letter
@@ -82,10 +82,8 @@ if __name__ == '__main__':
     character_count = {}
     # Перебираем каждый символ в предложении
     for char in sentence:
-        # Если символ уже есть в словаре, увеличиваем его счетчик на 1
         if char in character_count:
             character_count[char] += 1
-        # Если символа еще нет в словаре, добавляем его и устанавливаем счетчик в 1
         else:
             character_count[char] = 1
     # Выводим результаты
